@@ -76,11 +76,11 @@ usually offers that make it very affordable.
 
 #### What should I know before I get started?
 
-Check out the ["CARLA Design"](carla_design.md) document to get an idea on the
-different modules that compose CARLA, and chose the most appropriate one to hold
-the new feature. We are aware the developers documentation is still scarce,
-please ask us in case of doubt, and of course don't hesitate to improve the
-current documentation if you feel confident enough.
+Check out the ["CARLA Design"](index.md)<!-- @todo --> document to get an idea
+on the different modules that compose CARLA, and chose the most appropriate one
+to hold the new feature. We are aware the developers documentation is still
+scarce, please ask us in case of doubt, and of course don't hesitate to improve
+the current documentation if you feel confident enough.
 
 #### Are there any examples in CARLA to see how Unreal programming works?
 
@@ -131,7 +131,4 @@ If you see a red mark, please correct your code accordingly.
   - [ ] Your branch is up-to-date with the `master` branch and tested with latest changes
   - [ ] Extended the README / documentation, if necessary
   - [ ] Code compiles correctly
-  - [ ] All tests passing
-    - [ ] `make check`
-    - [ ] `pylint --disable=R,C --rcfile=PythonClient/.pylintrc PythonClient/carla PythonClient/*.py`
-    - [ ] `cppcheck . -iBuild -i.pb.cc --enable=warning`
+  - [ ] All tests passing with `make check`

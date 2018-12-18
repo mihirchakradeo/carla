@@ -6,6 +6,8 @@
 
 #pragma once
 
+#ifdef CARLA_COMPILE_CARLASERVER_LEGACY
+
 #include "Agent/AgentComponentVisitor.h"
 
 #include "Sensor/SensorDataView.h"
@@ -23,11 +25,6 @@ public:
   static void Encode(
     const TArray<APlayerStart *> &AvailableStartSpots,
     TArray<carla_transform> &Data);
-
-  static void Encode(
-    const TArray<USensorDescription *> &SensorDescriptions,
-    TArray<carla_sensor_definition> &Data,
-    TArray<TUniquePtr<const char[]>> &SensorNamesMemory);
 
   static void Encode(
       const ACarlaPlayerState &PlayerState,
@@ -74,3 +71,5 @@ private:
 
   carla_agent &Data;
 };
+
+#endif // CARLA_COMPILE_CARLASERVER_LEGACY
